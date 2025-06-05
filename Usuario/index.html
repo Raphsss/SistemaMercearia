@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Usuario</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="../Home/index.html" class="back-link" aria-label="Voltar">Voltar</a>
+
+  <div class="form-container">
+    <h2>Cadastro de Funcionário</h2>
+    <form action="script.php" method="POST">
+      <input type="text" name="nome" placeholder="Nome completo" required />
+      <input type="text" name="telefone" placeholder="Telefone (somente números)" required minlength="11" maxlength="11" />
+      <input type="text" name="endereco" placeholder="Endereço" required />
+      <input type="text" name="cpf" placeholder="CPF (somente números)" required minlength="11" maxlength="11" />
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>
