@@ -14,7 +14,7 @@ include 'exibirDados.php';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="../Home/index.html" class="back-link">Voltar para Home</a>
+    <a href="../Home/index.html" class="back-link" aria-label="Voltar para Home">Voltar</a>
 
     <div class="container">
         <h1>Dados Cadastrados na Mercearia</h1>
@@ -47,7 +47,7 @@ include 'exibirDados.php';
                     </tbody>
                 </table>
             <?php else: ?>
-                <p>Nenhum funcionário cadastrado.</p>
+                <p class="info-message">Nenhum funcionário cadastrado.</p>
             <?php endif; ?>
         </div>
 
@@ -79,7 +79,7 @@ include 'exibirDados.php';
                     </tbody>
                 </table>
             <?php else: ?>
-                <p>Nenhum usuário (cliente) cadastrado.</p>
+                <p class="info-message">Nenhum usuário (cliente) cadastrado.</p>
             <?php endif; ?>
         </div>
 
@@ -113,7 +113,7 @@ include 'exibirDados.php';
                     </tbody>
                 </table>
             <?php else: ?>
-                <p>Nenhum produto cadastrado no estoque.</p>
+                <p class="info-message">Nenhum produto cadastrado no estoque.</p>
             <?php endif; ?>
         </div>
     </div>
