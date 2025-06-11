@@ -1,5 +1,9 @@
 <?php
+
+require_once "../Config/db_connect.php";
+
 include 'exibirDados.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -18,7 +22,7 @@ include 'exibirDados.php';
         <div class="section-container">
             <h2>Funcionários Cadastrados</h2>
             <?php
-            $funcionarios = getFuncionarios();
+            $funcionarios = getFuncionarios($conn);
             if (!empty($funcionarios)): ?>
                 <table class="data-table">
                     <thead>
@@ -50,7 +54,7 @@ include 'exibirDados.php';
         <div class="section-container">
             <h2>Usuários (Clientes) Cadastrados</h2>
             <?php
-            $clientes = getUsuarios();
+            $clientes = getUsuarios($conn);
             if (!empty($clientes)): ?>
                 <table class="data-table">
                     <thead>
@@ -82,7 +86,7 @@ include 'exibirDados.php';
         <div class="section-container">
             <h2>Estoque de Produtos</h2>
             <?php
-            $produtos = getProdutos();
+            $produtos = getProdutos($conn);
             if (!empty($produtos)): ?>
                 <table class="data-table">
                     <thead>

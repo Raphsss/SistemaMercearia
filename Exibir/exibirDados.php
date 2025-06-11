@@ -1,16 +1,8 @@
 <?php
 
-function getFuncionarios() {
-    $dbHost = 'localhost';
-    $dbUserName = 'root';
-    $dbPassWord = 'senai.123';
-    $dbName = 'Mercearia';
+require_once "../Config/db_connect.php";
 
-    $conn = new mysqli($dbHost, $dbUserName, $dbPassWord, $dbName);
-    if ($conn->connect_error) {
-        error_log("Erro de conexão com o banco de dados (Funcionários): " . $conn->connect_error);
-        return [];
-    }
+function getFuncionarios($conn) {
 
     $funcionarios = [];
     $sql = "SELECT Num_Matricula, Nome, Telefone, Endereco, cpf FROM Funcionario ORDER BY Nome ASC";
@@ -32,22 +24,10 @@ function getFuncionarios() {
         error_log("Erro ao buscar funcionários: " . $stmt->error);
     }
 
-    $stmt->close();
-    $conn->close();
     return $funcionarios;
 }
 
-function getUsuarios() {
-    $dbHost = 'localhost';
-    $dbUserName = 'root';
-    $dbPassWord = 'senai.123';
-    $dbName = 'Mercearia';
-
-    $conn = new mysqli($dbHost, $dbUserName, $dbPassWord, $dbName);
-    if ($conn->connect_error) {
-        error_log("Erro de conexão com o banco de dados (Usuários): " . $conn->connect_error);
-        return [];
-    }
+function getUsuarios($conn) {
 
     $clientes = [];
     $sql = "SELECT Num_Matricula, Nome, Telefone, Endereco, cpf FROM Usuario ORDER BY Nome ASC";
@@ -69,22 +49,10 @@ function getUsuarios() {
         error_log("Erro ao buscar clientes: " . $stmt->error);
     }
 
-    $stmt->close();
-    $conn->close();
     return $clientes;
 }
 
-function getProdutos() {
-    $dbHost = 'localhost';
-    $dbUserName = 'root';
-    $dbPassWord = 'senai.123';
-    $dbName = 'Mercearia';
-
-    $conn = new mysqli($dbHost, $dbUserName, $dbPassWord, $dbName);
-    if ($conn->connect_error) {
-        error_log("Erro de conexão com o banco de dados (Produtos): " . $conn->connect_error);
-        return [];
-    }
+function getProdutos($conn) {
 
     $produtos = [];
     $sql = "SELECT id, nome, tipo, quantidade, data_validade, descricao FROM Produto ORDER BY nome ASC";
@@ -106,7 +74,5 @@ function getProdutos() {
         error_log("Erro ao buscar produtos: " . $stmt->error);
     }
 
-    $stmt->close();
-    $conn->close();
     return $produtos;
 }
