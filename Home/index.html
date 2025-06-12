@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home - Mercearia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Cor de fundo levemente cinza */
+            min-height: 100vh; /* Garante que o corpo ocupa toda a altura da viewport */
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
-
-<body>
-    <nav>
-        <div class="logo">Home Mercearia</div>
-        <div class="nav-links">
-            <a href="/CadastroFuncionario/Funcionario/index.html">Funcionário</a>
-            <a href="/CadastroFuncionario/Usuario/index.html">Usuário</a>
-            <a href="/CadastroFuncionario/Estoque/index.html">Estoque</a>
-            <a href="/CadastroFuncionario/Exibir/index.php">Exibir</a>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-gray-800">Home Mercearia</div>
+        <div class="flex space-x-6">
+            <a href="/CadastroFuncionario/Funcionario/index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Funcionário</a>
+            <a href="/CadastroFuncionario/Usuario/index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Usuário</a>
+            <a href="/CadastroFuncionario/Estoque/index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Estoque</a>
+            <a href="/CadastroFuncionario/Exibir/index.php" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300">Exibir</a>
         </div>
     </nav>
-    <div class="main">
-        <h1>Bem-vindo ao sistema da merceria!</h1>
+    <div class="flex-grow flex items-center justify-center p-4">
+        <h1 class="text-4xl font-bold text-gray-800 text-center">Bem-vindo ao sistema da mercearia!</h1>
     </div>
 </body>
-
 </html>

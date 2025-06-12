@@ -3,14 +3,12 @@
 require_once "../Config/db_connect.php";
 
 function getFuncionarios($conn) {
-
     $funcionarios = [];
-    $sql = "SELECT Num_Matricula, Nome, Telefone, Endereco, cpf FROM Funcionario ORDER BY Nome ASC";
+    $sql = "SELECT Num_Matricula, Nome, Telefone, cpf, salario, cargo, data_adamissao FROM Funcionario ORDER BY Nome ASC";
     $stmt = $conn->prepare($sql);
 
     if ($stmt === false) {
         error_log("Erro na preparação da query de funcionários: " . $conn->error);
-        $conn->close();
         return [];
     }
 
@@ -24,8 +22,10 @@ function getFuncionarios($conn) {
         error_log("Erro ao buscar funcionários: " . $stmt->error);
     }
 
+    $stmt->close();
     return $funcionarios;
 }
+
 
 function getUsuarios($conn) {
 
