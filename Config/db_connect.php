@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "";
+$pass = "senai.123";
 $db = "mercearia";
 
 // Cria a conexão

@@ -48,7 +48,8 @@ function getUsuarios($conn) {
     } else {
         error_log("Erro ao buscar clientes: " . $stmt->error);
     }
-
+    
+    $stmt->close();
     return $clientes;
 }
 
@@ -74,5 +75,6 @@ function getProdutos($conn) {
         error_log("Erro ao buscar produtos: " . $stmt->error);
     }
 
+    $stmt->close();
     return $produtos;
 }
