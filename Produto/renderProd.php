@@ -28,6 +28,10 @@ function renderProdutos($produtos) {
                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($p['data_validade']) ?></td>
                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($p['descricao']) ?></td>
                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
+                        <a href="../Produto/atualizarProd.php?id=<?= urlencode($p['id']) ?>"
+                           class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-800 transition mr-2">
+                            Atualizar
+                        </a>
                         <a href="../Produto/excluirProd.php?id=<?= urlencode($p['id']) ?>"
                            onclick="return confirm('Tem certeza que deseja excluir este produto?')"
                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">
