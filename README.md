@@ -12,7 +12,7 @@ Este é um sistema simples de cadastro e exibição de Funcionários, Usuários 
 1. **Clone o repositório:**
 
 ```sh
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Raphsss/SistemaMercearia
 ```
 
 2. **Coloque o projeto na pasta do XAMPP:**
