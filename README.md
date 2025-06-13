@@ -54,5 +54,4 @@ http://localhost/SistemaMercearia/Home/index.html
 - [XAMPP](https://www.apachefriends.org/index.html)
 - Exemplos de CRUD em PHP:  
   - https://www.tutorialrepublic.com/php-tutorial/php-mysql-crud-application.php
-  - 
 ---
