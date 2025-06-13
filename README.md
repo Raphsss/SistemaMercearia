@@ -53,7 +53,6 @@ http://localhost/SistemaMercearia/Home/index.html
 - [Tailwind CSS](https://tailwindcss.com/docs)
 - [XAMPP](https://www.apachefriends.org/index.html)
 - Exemplos de CRUD em PHP:  
-  - https://www.tutorialrepublic.com/php-tutorial/php-mysql-crud-application.php  
-  - https://www.devmedia.com.br/crud-com-php-mysqli/28731
-
+  - https://www.tutorialrepublic.com/php-tutorial/php-mysql-crud-application.php
+  - 
 ---
