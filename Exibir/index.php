@@ -1,7 +1,10 @@
 <?php
 
 require_once "../Config/db_connect.php";
-include 'exibirDados.php';
+
+include '../Funcionario/listarFunc.php';
+include '../Produto/listarProd.php';
+include '../Usuario/listarUser.php';
 
 ?>
 <!DOCTYPE html>
@@ -62,7 +65,7 @@ include 'exibirDados.php';
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($funcionario['cargo']) ?></td>
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($funcionario['data_adamissao']) ?></td>
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
-                                        <a href="excluir_funcionario.php?matricula=<?= urlencode($funcionario['Num_Matricula']) ?>"
+                                        <a href="../Funcionario/excluirFunc.php?matricula=<?= urlencode($funcionario['Num_Matricula']) ?>"
                                            onclick="return confirm('Tem certeza que deseja excluir este funcionário?')"
                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">
                                             Excluir
@@ -105,7 +108,7 @@ include 'exibirDados.php';
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($usuario['Endereco']) ?></td>
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($usuario['cpf']) ?></td>
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
-                                        <a href="excluir_usuario.php?matricula=<?= urlencode($usuario['Num_Matricula']) ?>"
+                                        <a href="../Usuario/excluirUser.php?matricula=<?= urlencode($usuario['Num_Matricula']) ?>"
                                            onclick="return confirm('Tem certeza que deseja excluir este usuário?')"
                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">
                                             Excluir
@@ -150,7 +153,7 @@ include 'exibirDados.php';
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($produto['data_validade']) ?></td>
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm"><?= htmlspecialchars($produto['descricao']) ?></td>
                                     <td class="px-5 py-3 border-b border-gray-200 bg-white text-sm">
-                                        <a href="excluir_produto.php?id=<?= urlencode($produto['id']) ?>"
+                                        <a href="../Produto/excluirProd.php?id=<?= urlencode($produto['id']) ?>"
                                            onclick="return confirm('Tem certeza que deseja excluir este produto?')"
                                            class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-800 transition">
                                             Excluir
